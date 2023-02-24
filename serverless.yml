@@ -1,0 +1,52 @@
+service:
+  name: aws-nodejs-typescript-template
+
+package:
+  exclude:
+    - src/**/_tests_/**/*
+
+custom:
+  customStage: ${opt:stage, self:provider.stage}
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+  customEnvironment:
+    ENV:
+      dev: dev
+      staging: staging
+      prod: prod
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs10.x
+  region: ap-south-1
+  logRetentionInDays: 7
+  timeout: 30
+  environment:
+    ENV: ${self:custom.customEnvironment.ENV.${self:custom.customStage}}
+
+plugins:
+  localPath: ../..
+  modules:
+    - serverless-webpack
+    - serverless-offline
+
+functions:
+  hello:
+    handler: handler.handle
+    events:
+      - http:
+          path: handle
+          method: post
+          cors:
+            origin: "*"
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+          allowCredentials: false

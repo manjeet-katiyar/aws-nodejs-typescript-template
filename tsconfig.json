@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es2017"
+        ],
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "es2017",
+        "outDir": "lib",
+        "baseUrl": "./",
+        "types": [
+            "node"
+        ],
+        "skipLibCheck": true,
+        "module": "commonjs"
+    },
+    "include": [
+        "**/*.ts",
+        "*.ts"
+    ],
+    "exclude": [
+        "/**/__tests__/**/*.ts",
+        "__tests__/**/*.ts",
+        "node_modules"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "aws-nodejs-typescript-template",
+  "version": "1.0.0",
+  "description": "Aws nodejs typescript template",
+  "main": "handler.js",
+  "scripts": {
+    "dev": "sls offline start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "validator": "^13.5.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.165",
+    "@types/node": "^14.14.7",
+    "@types/validator": "^13.1.0",
+    "@types/aws-lambda": "^8.10.17",
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "babel": "^6.23.0",
+    "eslint": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "serverless-offline": "^5.12.1",
+    "serverless-webpack": "^5.2.0",
+    "serverless-plugin-aws-alerts": "^1.4.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
