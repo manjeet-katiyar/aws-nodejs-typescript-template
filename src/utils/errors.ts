@@ -4,8 +4,8 @@ export class HttpError extends Error {
     errorCode: any;
     constructor(error) {
         super(error.message);
-        this.type = "httpError";
+        this.type = 'httpError';
         this.status = error.status;
-        this.errorCode = error.error_code
+        this.errorCode = error.error_code;
     }
 };

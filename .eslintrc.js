@@ -43,5 +43,11 @@ module.exports = {
         "indent": ["error", 4],
         "@typescript-eslint/camelcase": [0],
         "camelcase": [0],
+        'linebreak-style': ['error', 'unix'],
+        'quotes': ['error', 'single'],
+        'semi': ['error', 'always'],
+        'max-len': [1, 160, 4],
+        'no-console': 'off',
+        'eol-last': ['error', 'always'],
     }
 }

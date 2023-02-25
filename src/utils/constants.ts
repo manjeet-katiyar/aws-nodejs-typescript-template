@@ -4,7 +4,7 @@ export const errorMessages = {
     INVALID_PAYLOAD: (): Error => ({
         status: 400,
         error_code: 'INVALID_PAYLOAD',
-        message: "Please provide correct payload."
+        message: 'Please provide correct payload.'
     }),
 };
 
@@ -13,8 +13,8 @@ export const successMessages = {
         statusCode: 200,
         body: JSON.stringify({ details: details }, null, 4),
         headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true
         },
     })
 };

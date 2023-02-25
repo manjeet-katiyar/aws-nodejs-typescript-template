@@ -13,5 +13,5 @@ export const handle = async (event, _context) => {
         logger.error(error.message);
         return errorHandler(error);
     }
-}
+};
 

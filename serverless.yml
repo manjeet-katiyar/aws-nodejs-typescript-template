@@ -1,5 +1,4 @@
-service:
-  name: aws-nodejs-typescript-template
+service: aws-nodejs-typescript-template
 
 package:
   exclude:
@@ -20,7 +19,7 @@ custom:
 provider:
   name: aws
   stage: dev
-  runtime: nodejs10.x
+  runtime: nodejs14.x
   region: ap-south-1
   logRetentionInDays: 7
   timeout: 30
@@ -35,18 +34,8 @@ plugins:
 
 functions:
   hello:
-    handler: handler.handle
+    handler: src/handler.handle
     events:
-      - http:
-          path: handle
-          method: post
-          cors:
-            origin: "*"
-            headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-          allowCredentials: false
+      - httpApi:
+          method: POST
+          path: /handle
